@@ -1,8 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "deterministic-event-ordering"
 version = "0.1.0"
-description = "Deterministic canonical ordering for distributed events under clock skew and late arrival."
-requires-python = ">=3.10"
+description = "Deterministic, rule-based ordering of distributed events under explicit constraints."
+requires-python = ">=3.11"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
@@ -12,3 +22,4 @@ line-length = 88
 
 [tool.ruff]
 line-length = 88
+
