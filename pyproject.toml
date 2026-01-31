@@ -1,0 +1,14 @@
+[project]
+name = "deterministic-event-ordering"
+version = "0.1.0"
+description = "Deterministic canonical ordering for distributed events under clock skew and late arrival."
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.black]
+line-length = 88
+
+[tool.ruff]
+line-length = 88
