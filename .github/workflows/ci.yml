@@ -13,6 +13,7 @@ jobs:
         with:
           python-version: "3.11"
       - run: pip install pytest black ruff
+      - run: pip install -e .
       - run: black --check .
       - run: ruff check .
       - run: pytest
